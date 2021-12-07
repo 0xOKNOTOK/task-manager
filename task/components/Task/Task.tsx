@@ -1,5 +1,5 @@
-import React from 'react';
-import { FlexWrapper } from '../FlexWrapper/FlexWrapper';
+import React from 'react'
+import { FlexWrapper } from '../FlexWrapper/FlexWrapper'
 
 
 interface Props { 
