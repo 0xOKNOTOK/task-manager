@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import styles from './Brand.module.css'
 
 
@@ -7,7 +8,7 @@ import styles from './Brand.module.css'
 
 export const Brand: React.FC = () => {
     return <span>
-        <img />
+        <Image />
         <h1>task</h1>
     </span>
 }
