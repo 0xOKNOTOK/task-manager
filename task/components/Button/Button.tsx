@@ -6,5 +6,5 @@ interface Props {
     buttonLabel: string;
 }
 export const ButtonStandard: React.FC<Props> = (props) => {
-    return (<button className={styles.btn}>{props.buttonLabel}</button>)
+    return (<button className={styles.base}>{props.buttonLabel}</button>)
 }
