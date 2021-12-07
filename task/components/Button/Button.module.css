@@ -1,6 +1,10 @@
 
-
 .base {
-    background: coral;
+    background-color: var(--element-orange);
+}
+
+.base:hover {
+    background-color: var(--element-aqua);
+    transition: var(--transition-speed) ease-in;
 }
 
