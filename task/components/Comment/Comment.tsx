@@ -13,8 +13,12 @@ interface Comment {
     reactions: Array<object>
 }
 
-export const Comment: React.FC<Props> = ({}) => {
+export const Comment: React.FC<Props> = () => {
     return <div className={styles.base}>
-
+        <p>content</p>
+        <p>author</p>
+        <p>likes</p>
+        <p>replies</p>
+        <span>reactions</span>
     </div>
 }
