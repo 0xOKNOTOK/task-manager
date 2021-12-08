@@ -8,7 +8,7 @@ import styles from './Brand.module.css'
 
 export const Brand = () => {
     return <span>
-        <Image alt="image of"/>
+        <Image src="/" alt="image of"/>
         <h1>task</h1>
     </span>
 }
