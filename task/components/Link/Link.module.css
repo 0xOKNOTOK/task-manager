@@ -1,5 +1,4 @@
 .base {
-
-    
-
+    text-decoration: none;
+    color: var(--text-grey);
 }
