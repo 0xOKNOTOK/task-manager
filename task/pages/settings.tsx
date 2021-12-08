@@ -9,10 +9,12 @@ const Settings: NextPage = () => {
             
         </Head>
         <main>
-            
+
         </main>
         <footer>
 
         </footer>
     </div>)
 }
+
+export default Settings

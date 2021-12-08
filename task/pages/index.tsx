@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 
 // Components
 import { ButtonStandard } from '../components/Button/Button'
+import { AnchorLink } from '../components/Link/Link'
 
 
 const Home: NextPage = () => {
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
       <ButtonStandard buttonLabel='Hi'/>
+      <AnchorLink reference='/settings' linkLabel='Hello'/>
       </main>
 
       <footer className={styles.footer}>

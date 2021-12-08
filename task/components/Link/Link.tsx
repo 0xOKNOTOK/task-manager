@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from './Link.module.css'
 
 
@@ -8,8 +9,11 @@ interface Props {
     icon?: string,
 }
 
-export const Link = (props: Props) => {
-
-
-    return <a href={props.reference}>{props.icon ? props.icon : null}{props.linkLabel}</a>
+export const AnchorLink = (props: Props) => {
+    return <Link href={props.reference}>
+        <a>
+            {props.icon ? props.icon : null}
+            {props.linkLabel}
+        </a>
+    </Link>
 }
