@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Navbar.module.css'
 
 
-export const Navbar: React.FC = () => {
+export const Navbar = () => {
     return <nav className={styles.base}>
 
     </nav>

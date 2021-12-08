@@ -7,6 +7,6 @@ interface Props {
     linkLabel: string,
 }
 
-export const Link: React.FC<Props> = (props) => {
+export const Link = (props: Props) => {
     return <a href={props.reference}>{props.linkLabel}</a>
 }

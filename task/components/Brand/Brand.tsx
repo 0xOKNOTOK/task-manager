@@ -6,9 +6,9 @@ import styles from './Brand.module.css'
 // THIS COMPONENT MAY BECOME REDUNDANT 
 
 
-export const Brand: React.FC = () => {
+export const Brand = () => {
     return <span>
-        <Image />
+        <Image alt="image of"/>
         <h1>task</h1>
     </span>
 }

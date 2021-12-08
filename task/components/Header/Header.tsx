@@ -7,7 +7,7 @@ interface Props {
     project: Object,
 }
 
-export const Header: React.FC<Props> = (props) => {
+export const Header = (props: Props) => {
     return <header className={styles.base}>
     </header>
 }

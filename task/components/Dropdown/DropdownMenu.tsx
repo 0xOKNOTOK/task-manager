@@ -5,7 +5,7 @@ interface Props {
     name: string,
 }
 
-export const DropdownMenu: React.FC<Props> = (props) => {
+export const DropdownMenu = (props: Props) => {
     return <select>
         <option>{props.name}</option>
     </select>

@@ -14,7 +14,7 @@ interface Task { // TODO change to required once data can be provided.
 
 }
 
-export const Task: React.FC<Props> = ({}) => {
+export const Task = ({}: Props) => {
     return <FlexWrapper> 
         <h1></h1>
         <p></p>
