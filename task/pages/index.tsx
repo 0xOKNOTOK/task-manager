@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 
 // Components
 import { ButtonStandard } from '../components/Button/Button'
-import { AnchorLink } from '../components/Link/Link'
+import { AnchorLink } from '../components/AnchorLink/AnchorLink'
 
 
 const Home: NextPage = () => {
