@@ -28,6 +28,13 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+main {
+  width: 100%;
+  background-color: var(--background-grey);
+  display: flex;
+  align-items: flex-start;
+}
+
 a {
   color: inherit;
   text-decoration: none;
