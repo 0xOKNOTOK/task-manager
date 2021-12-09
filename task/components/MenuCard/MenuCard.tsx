@@ -6,7 +6,7 @@ interface Props {
     
 }
 
-const MenuCard = (props: Props) => {
+const MenuCard = ({}: Props) => {
     return <FlexWrapper>
         <h2>Team</h2>
         <p>... ... ... ... ...</p>

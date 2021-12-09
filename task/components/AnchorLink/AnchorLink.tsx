@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
-import styles from './Link.module.css'
+import styles from './AnchorLink.module.css'
 
 
 interface Props {
     reference: string,
     linkLabel: string,
-    icon?: any | null,
+    icon?: any,
 }
 
-export const AnchorLink = (props: Props) => {
-    return <Link href={props.reference} >
+export const AnchorLink = ({reference, linkLabel, icon}: Props) => {
+    return <Link href={reference} >
         <a className={styles.base}>
-            {props.icon ? props.icon : null}
-            {props.linkLabel}
+            {icon ? icon : null}
+            {linkLabel}
         </a>
     </Link>
 }

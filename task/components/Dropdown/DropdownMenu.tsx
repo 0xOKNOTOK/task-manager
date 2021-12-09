@@ -5,8 +5,8 @@ interface Props {
     name: string,
 }
 
-export const DropdownMenu = (props: Props) => {
+export const DropdownMenu = ({name}: Props) => {
     return <select>
-        <option>{props.name}</option>
+        <option>{name}</option>
     </select>
 }

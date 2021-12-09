@@ -7,7 +7,7 @@ interface Props {
     project: Object,
 }
 
-export const Header = (props: Props) => {
+export const Header = ({project}: Props) => {
     return <header className={styles.base}>
     </header>
 }

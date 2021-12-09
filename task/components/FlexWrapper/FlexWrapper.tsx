@@ -6,8 +6,8 @@ interface Props {
 }
 
 
-export const FlexWrapper = (props: Props) => {
+export const FlexWrapper = ({children}: Props) => {
     return <div className={styles.base}>
-        {props.children}
+        {children}
     </div>
 }

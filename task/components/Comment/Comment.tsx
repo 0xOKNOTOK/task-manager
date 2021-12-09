@@ -13,7 +13,7 @@ interface Comment {
     reactions: Array<object>
 }
 
-export const Comment = (props: Props) => {
+export const Comment = ({comment}: Props) => {
     return <div className={styles.base}>
         <p>content</p>
         <p>author</p>
