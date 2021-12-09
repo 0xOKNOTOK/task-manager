@@ -2,3 +2,8 @@
     text-decoration: none;
     color: var(--text-grey);
 }
+
+.base:hover {
+    color: var(--text-white);
+    transition: var(--transition-speed) ease-in;
+}

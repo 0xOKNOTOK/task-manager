@@ -36,6 +36,11 @@ a {
   box-sizing: border-box;
 }
 
+li {
+  list-style-type: none;
+  text-align: left;
+}
+
 button {
   cursor: pointer;
   border: none;

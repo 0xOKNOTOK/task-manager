@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 // Components
+import { Navbar } from '../components/Navbar/Navbar'
 import { ButtonStandard } from '../components/Button/Button'
 import { AnchorLink } from '../components/AnchorLink/AnchorLink'
 
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+      <Navbar />
       <ButtonStandard buttonLabel='Hi'/>
       <AnchorLink reference='/settings' linkLabel='Hello'/>
       </main>

@@ -10,8 +10,8 @@ interface Props {
 }
 
 export const AnchorLink = (props: Props) => {
-    return <Link href={props.reference}>
-        <a>
+    return <Link href={props.reference} >
+        <a className={styles.base}>
             {props.icon ? props.icon : null}
             {props.linkLabel}
         </a>
