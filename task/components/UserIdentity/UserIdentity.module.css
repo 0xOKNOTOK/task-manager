@@ -7,7 +7,6 @@
     width: 200px;
     background-color: var(--background-grey);
     height: 50%;
-    margin-right: 30px;
     border-radius: var(--border-radius);
     padding: 10px;
 }
