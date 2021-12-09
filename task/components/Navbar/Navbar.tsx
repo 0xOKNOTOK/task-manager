@@ -1,41 +1,41 @@
 import React from 'react'
 import styles from './Navbar.module.css'
 import { AnchorLink } from '../AnchorLink/AnchorLink'
-
+import {MdPeopleAlt, MdSpaceDashboard, MdChat, MdArticle, MdPayments, MdAccountBox, MdSettingsApplications, MdOutlineLogout, MdPeople, MdLogout } from 'react-icons/md';
 
 export const Navbar = () => {
-    return <nav className={styles.base}>
+    return <nav className={styles.nav}>
         <h1>{`> task`}</h1>
-        <ul>
+        <ul className={styles.ul}>
             <li>
-                <AnchorLink reference='/teams' linkLabel='Teams'/>
+                <AnchorLink icon={<MdPeopleAlt className={styles.svg}/>} reference='/teams' linkLabel='Teams'/>
             </li>
             <li>
-                <AnchorLink reference='/boards' linkLabel='Boards' />
+                <AnchorLink icon={<MdSpaceDashboard className={styles.svg}/>} reference='/boards' linkLabel='Boards' />
             </li>
             <li>
-                <AnchorLink reference='/chats' linkLabel='Chats' />
+                <AnchorLink icon={<MdChat className={styles.svg}/>} reference='/chats' linkLabel='Chats' />
             </li>
             <li>
-                <AnchorLink reference='/timetable' linkLabel='Timetable' />
+                <AnchorLink icon={<MdArticle className={styles.svg}/>} reference='/timetable' linkLabel='Timetable' />
             </li>
          </ul>
-         <ul>
+         <ul className={styles.ul}>
             <li>
-                <AnchorLink reference='/plans' linkLabel='Plans' />
+                <AnchorLink icon={<MdPayments className={styles.svg}/>} reference='/plans' linkLabel='Plans' />
             </li>
             <li>
-                <AnchorLink reference='/account' linkLabel='Account' />
+                <AnchorLink icon={<MdAccountBox className={styles.svg}/>} reference='/account' linkLabel='Account' />
             </li>
             <li>
-                <AnchorLink reference='/settings' linkLabel='Settings' />
+                <AnchorLink icon={<MdSettingsApplications className={styles.svg} />} reference='/settings' linkLabel='Settings' />
             </li>
          </ul>
          <span>
              BLANK
          </span>
-         <ul>
-             <AnchorLink reference='/logout' linkLabel='Log out' />
+         <ul className={styles.ul}>
+             <AnchorLink icon={<MdLogout className={styles.svg}/>} reference='/logout' linkLabel='Log out' />
          </ul>
          
     </nav>

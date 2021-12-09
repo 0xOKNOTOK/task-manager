@@ -1,0 +1,21 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    height: 100vh;
+    width: 250px;
+    min-width: 100px;
+    background-color: var(--background-grey);
+    border-right: 10px var(--element-aqua) solid;
+}
+
+
+.ul {
+    padding: 0;
+}
+
+
+.svg {
+    transform: scale(1.5);
+}
