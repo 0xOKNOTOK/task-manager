@@ -1,6 +1,8 @@
 import React from 'react'
 import styles from './ProjectHeader.module.css'
 import { FlexWrapper } from '../FlexWrapper/FlexWrapper'
+import { AnchorLink } from '../AnchorLink/AnchorLink'
+import {MdBackupTable, MdTask, MdInsertDriveFile,  MdCalendarToday  } from 'react-icons/md'
 
 interface Props {
     title?: string,
@@ -13,6 +15,7 @@ interface Props {
 export const ProjectHeader = ({}: Props) => {
     return (
         <div className={styles.base}>
+            <div className={styles.topBar}>
                 <div>
                     <h1>Project Name</h1>
                     <div>
@@ -26,6 +29,19 @@ export const ProjectHeader = ({}: Props) => {
                         <p>Senior Dev</p>
                     </div>
                 </div>
+            </div>
+            <div className={styles.bottomBar}>
+                <div className={styles.nav}>
+                    <AnchorLink icon={<MdBackupTable className={styles.icon} />} reference='/board/1' linkLabel='Dashboard'/>
+                    <AnchorLink icon={<MdTask className={styles.icon} />} reference='/board/tasks' linkLabel='Tasks'/>
+                    <AnchorLink icon={<MdInsertDriveFile className={styles.icon}  />} reference='/board/documents' linkLabel='Documents'/>
+                    <AnchorLink icon={<MdCalendarToday  className={styles.icon}/>} reference='/board/calendar' linkLabel='Calendar'/>
+                </div>
+                <div className={styles.tab}>
+
+                </div>
+            </div>
+
         </div>
     )
 }

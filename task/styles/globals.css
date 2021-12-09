@@ -7,11 +7,14 @@
   --background-blue: #242937;
   --element-orange: #F9896A;
   --text-white: #FBFBFB;
-  --text-grey: #dddbdb;
+  --text-grey: #aaa8a8;
   --element-aqua: #11A6A6;
 
   /* Animation variables */
   --transition-speed: 300ms;
+
+  /* Border variables */
+  --border-radius: 4px;
 
 
 }
