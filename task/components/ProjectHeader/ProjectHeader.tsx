@@ -22,7 +22,7 @@ export const ProjectHeader = ({}: Props) => {
                         <p>0/1/1/ created by @user</p>
                     </div>
                 </div>
-                <div>
+                <div className={styles.user}>
                     <span></span>
                     <div>
                         <h3>Username</h3>
