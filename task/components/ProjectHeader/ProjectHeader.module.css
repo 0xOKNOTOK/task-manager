@@ -16,37 +16,6 @@
     align-items: center;
 }
 
-.user {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 200px;
-    background-color: var(--background-grey);
-    height: 50%;
-    margin-right: 30px;
-    border-radius: var(--border-radius);
-    padding: 10px;
-}
-
-.user span {
-    width: 30px;
-    height: 30px;
-    border-radius: 50px;
-    background-color: var(--text-grey);
-    margin-right: 10px;
-}
-
-.user h3 {
-    font-size: 0.8rem;
-    margin: 0;
-}
-
-.user p {
-    margin: 0;
-    font-size: 0.7rem;
-}
-
 
 .bottomBar {
     height: 35%;

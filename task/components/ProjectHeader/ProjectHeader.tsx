@@ -3,6 +3,7 @@ import styles from './ProjectHeader.module.css'
 import { FlexWrapper } from '../FlexWrapper/FlexWrapper'
 import { AnchorLink } from '../AnchorLink/AnchorLink'
 import {MdBackupTable, MdTask, MdInsertDriveFile,  MdCalendarToday  } from 'react-icons/md'
+import { UserIdentity } from '../UserIdentity/UserIdentity'
 
 interface Props {
     title?: string,
@@ -22,13 +23,7 @@ export const ProjectHeader = ({}: Props) => {
                         <p>0/1/1/ created by @user</p>
                     </div>
                 </div>
-                <div className={styles.user}>
-                    <span></span>
-                    <div>
-                        <h3>Username</h3>
-                        <p>Senior Dev</p>
-                    </div>
-                </div>
+                <UserIdentity />
             </div>
             <div className={styles.bottomBar}>
                 <div className={styles.nav}>
