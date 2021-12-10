@@ -2,11 +2,9 @@ import React from 'react'
 import styles from './GridWrapper.module.css'
 
 interface Props {
-    children: React.ReactChildren
+  children: any
 }
 
-export const GridWrapper = ({children}: Props) => {
-    return <div className={styles.base}>
-        {children} 
-    </div>
+export const GridWrapper = ({ children }: Props) => {
+  return <div className={styles.base}>{children}</div>
 }
