@@ -6,16 +6,14 @@ import styles from '../styles/Settings.module.css'
 import { Footer } from '../components/Footer/Footer'
 
 const Settings: NextPage = () => {
-    return (<div className={styles.container}>
-        <Head>
-            
-        </Head>
-        <main>
+  return (
+    <div className={styles.container}>
+      <Head></Head>
+      <main></main>
 
-        </main>
-
-        <Footer />
-    </div>)
+      <Footer />
+    </div>
+  )
 }
 
 export default Settings

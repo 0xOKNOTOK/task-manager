@@ -4,28 +4,29 @@ import styles from '../styles/Home.module.css'
 
 // Components
 import { Navbar } from '../components/Navbar/Navbar'
-import { ButtonStandard } from '../components/Button/Button'
+import { Button } from '../components/Button/Button'
 import { AnchorLink } from '../components/AnchorLink/AnchorLink'
 import { Footer } from '../components/Footer/Footer'
-
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
         <title>{`> task`}</title>
-        <meta name="description" content="Task management system for developers." />
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name='description'
+          content='Task management system for developers.'
+        />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main className={styles.main}>
-      <Navbar />
-      <ButtonStandard buttonLabel='Hi'/>
-      <AnchorLink reference='/settings' linkLabel='Hello'/>
+        <Navbar />
+        <Button onClick={() => console.log('hi')} buttonLabel='Hi' />
+        <AnchorLink reference='/settings' linkLabel='Hello' />
       </main>
 
-      <Footer/>
-
+      <Footer />
     </div>
   )
 }

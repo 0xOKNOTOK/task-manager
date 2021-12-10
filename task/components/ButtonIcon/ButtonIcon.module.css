@@ -1,0 +1,13 @@
+.btn {
+  border: none;
+  background: none;
+  color: var(--text-white);
+  transform: scale(3);
+  padding: 0;
+  margin: 0;
+  height: 10px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}

@@ -1,34 +1,39 @@
 .nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 35px;
-    height: 100vh;
-    width: 15%;
-    max-width: 300px;
-    min-width: 210px;
-    background-color: var(--background-grey);
-    border-right: 10px var(--element-aqua) solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 35px;
+  height: 100vh;
+  width: 15%;
+  max-width: 300px;
+  min-width: 210px;
+  background-color: var(--background-grey);
+  border-right: 10px var(--element-aqua) solid;
 }
 
+.nav span {
+  height: 40vh;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .ul {
-    padding: 0;
+  padding: 0;
 }
-
 
 .li {
-    padding: 10px;
+  padding: 10px;
 }
 
-
 .svg {
-    transform: scale(1.2);
-    margin-right: 20px;
+  transform: scale(1.2);
+  margin-right: 20px;
 }
 
 .arrow {
-    color: var(--element-orange);
+  color: var(--element-orange);
 }
-
-

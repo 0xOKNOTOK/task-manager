@@ -1,12 +1,15 @@
 import { AppProps } from 'next/app'
-import React from 'react'
+import React, { MouseEventHandler } from 'react'
 import styles from './Button.module.css'
 
-
 interface Props {
-    buttonLabel: string | ImageBitmap
-    onClick?: Function
+  buttonLabel: any
+  onClick: MouseEventHandler<HTMLButtonElement>
 }
-export const ButtonStandard = ({buttonLabel}: Props) => {
-    return (<button className={styles.base}>{buttonLabel}</button>)
+export const Button = ({ buttonLabel, onClick }: Props) => {
+  return (
+    <button onClick={onClick} className={styles.base}>
+      {buttonLabel}
+    </button>
+  )
 }
