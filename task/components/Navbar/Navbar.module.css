@@ -37,3 +37,17 @@
 .arrow {
   color: var(--element-orange);
 }
+
+@media screen and (max-width: 1100px) {
+  .nav {
+    display: none;
+    background-color: none;
+    border: none;
+  }
+  .ul {
+    display: none;
+  }
+  .brand h1 {
+    display: none;
+  }
+}
