@@ -3,8 +3,9 @@ import styles from './GridWrapper.module.css'
 
 interface Props {
   children: any
+  className: string
 }
 
-export const GridWrapper = ({ children }: Props) => {
-  return <div className={styles.base}>{children}</div>
+export const GridWrapper = ({ className, children }: Props) => {
+  return <div className={className}>{children}</div>
 }
