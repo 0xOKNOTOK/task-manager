@@ -15,8 +15,11 @@ export const SearchBar = () => {
   }
   return (
     <FlexWrapper className={styles.flexWrapper}>
-      <MdSearch className={styles.searchIcon} />
-      <input type='search' name='taskSearch' id='task' />
+      <div className={styles.search}>
+        <MdSearch className={styles.searchIcon} />
+        <input type='search' placeholder='Search' name='taskSearch' id='task' />
+      </div>
+
       <ButtonIcon
         icon={<MdFilterList />}
         onClick={handleFilterButtonPress}
