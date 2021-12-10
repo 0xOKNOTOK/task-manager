@@ -49,3 +49,6 @@
   transform: scale(1.5);
   color: var(--text-grey);
 }
+
+@media screen and (max-width: 1200px) {
+}
