@@ -1,0 +1,63 @@
+.flexWrapper {
+  margin: 5%;
+  padding: 20px;
+  border-radius: var(--border-radius);
+  width: 80%;
+  background-color: var(--background-blue);
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.flexWrapper input {
+  background-color: var(--background-blue);
+  border: none;
+  width: 40%;
+  height: 36px;
+  outline: none;
+  font-family: 'Poppins';
+  font-size: 1rem;
+  color: var(--text-white);
+  border-bottom: 2px dashed var(--element-orange);
+  transition: var(--transition-speed) ease-in;
+}
+
+.flexWrapper input:focus {
+  transition: var(--transition-speed) ease-in;
+  border-bottom: 2px solid var(--element-aqua);
+}
+
+.flexWrapper button {
+  font-family: 'Poppins';
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: var(--text-white);
+  border-radius: var(--border-radius);
+  height: 36px;
+  width: 104px;
+  font-size: 0.8rem;
+}
+
+.searchIcon {
+  transform: scale(1.5);
+}
+
+.newTask {
+  border: none;
+  background-color: var(--element-orange);
+}
+
+.newTask svg {
+  transform: scale(1.5);
+}
+
+.filterBtn {
+  background: none;
+  border: 1px solid var(--background-grey);
+}
+.filterBtn svg {
+  transform: scale(1.5);
+}

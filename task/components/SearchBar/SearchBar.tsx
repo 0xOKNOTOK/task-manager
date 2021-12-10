@@ -1,7 +1,7 @@
 import React, { SyntheticEvent } from 'react'
 import { FlexWrapper } from '../FlexWrapper/FlexWrapper'
 import styles from './SearchBar.module.css'
-import { MdSearch, MdFilterList, MdPostAdd, MdFilter } from 'react-icons/md'
+import { MdSearch, MdFilterList, MdPostAdd } from 'react-icons/md'
 import { Button } from '../Button/Button'
 import { ButtonIcon } from '../ButtonIcon/ButtonIcon'
 
@@ -14,20 +14,20 @@ export const SearchBar = () => {
     event.preventDefault()
   }
   return (
-    <FlexWrapper>
-      <MdSearch />
+    <FlexWrapper className={styles.flexWrapper}>
+      <MdSearch className={styles.searchIcon} />
       <input type='search' name='taskSearch' id='task' />
       <ButtonIcon
-        icon={<MdFilter />}
+        icon={<MdFilterList />}
         onClick={handleFilterButtonPress}
-        cssClass='filter'
+        cssClass={styles.filterBtn}
       >
         Filter
       </ButtonIcon>
       <ButtonIcon
         icon={<MdPostAdd />}
         onClick={handleNewTaskButtonPress}
-        cssClass='newtask'
+        cssClass={styles.newTask}
       >
         New Task
       </ButtonIcon>

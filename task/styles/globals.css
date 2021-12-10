@@ -28,10 +28,9 @@ body {
 }
 
 main {
+  display: flex;
   width: 100%;
   background-color: var(--background-grey);
-  display: flex;
-  align-items: flex-start;
 }
 
 a {
