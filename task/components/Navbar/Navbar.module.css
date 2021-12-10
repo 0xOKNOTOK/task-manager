@@ -39,6 +39,7 @@
 }
 
 .closedNav {
+  transition: 100ms ease-out;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
