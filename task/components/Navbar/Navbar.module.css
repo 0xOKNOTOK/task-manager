@@ -12,7 +12,7 @@
 }
 
 .nav span {
-  height: 40vh;
+  height: 10vh;
 }
 
 .brand {
@@ -59,14 +59,13 @@
 }
 
 .closedNavToggle {
-  padding: 20px 0px;
+  margin: 28px 0px;
   border: none;
   background: none;
   color: var(--text-white);
   transform: scale(3);
-  margin: 0;
-  margin: 0;
-  height: 10px;
+
+  height: 8px;
 }
 
 .closedNavToggle:hover {
@@ -90,16 +89,4 @@
 
 .closedNav span {
   height: 40vh;
-}
-
-@media screen and (min-width: 1000px) {
-  .nav {
-    position: absolute;
-    z-index: 1;
-  }
-
-  .closedNav {
-    position: absolute;
-    z-index: 1;
-  }
 }

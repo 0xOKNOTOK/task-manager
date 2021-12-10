@@ -12,25 +12,15 @@
   display: flex;
   width: 100%;
   height: 65%;
-  padding-left: 2%;
+  padding-left: 5%;
   padding-right: 2%;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
 
-.projectInfo {
-  width: 35%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.projectInfo div {
-  background-color: var(--background-grey);
-  padding: 0px 10px;
-  font-size: 0.7rem;
-  border-radius: var(--border-radius);
+.projectInfo h1 {
+  font-size: 1.125rem;
 }
 
 .bottomBar {
@@ -45,6 +35,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  font-size: 0.875rem;
 }
 
 .tab {
@@ -56,5 +47,5 @@
 .icon {
   margin-right: 20px;
   transform: scale(1.5);
-  color: var(--element-orange);
+  color: var(--text-grey);
 }

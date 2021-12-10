@@ -24,9 +24,6 @@ export const ProjectHeader = ({}: Props) => {
       <div className={styles.topBar}>
         <div className={styles.projectInfo}>
           <h1>Project Name</h1>
-          <div>
-            <p>0/1/1/ created by @user</p>
-          </div>
         </div>
         <UserIdentity />
       </div>
