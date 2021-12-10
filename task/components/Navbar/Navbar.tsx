@@ -10,8 +10,8 @@ import {
   MdAccountBox,
   MdSettingsApplications,
   MdLogout,
-  MdNavigateBefore,
-  MdNavigateNext
+  MdMenu,
+  MdClose
 } from 'react-icons/md'
 
 import { ButtonIcon } from '../ButtonIcon/ButtonIcon'
@@ -34,11 +34,11 @@ export const Navbar = () => {
         </h1>
         {isNavExpanded ? (
           <ButtonIcon cssClass={styles.btn} onClick={toggleNavBar}>
-            {<MdNavigateBefore />}
+            {<MdClose />}
           </ButtonIcon>
         ) : (
           <ButtonIcon cssClass={styles.closedNavToggle} onClick={toggleNavBar}>
-            {<MdNavigateNext />}
+            {<MdMenu />}
           </ButtonIcon>
         )}
       </div>

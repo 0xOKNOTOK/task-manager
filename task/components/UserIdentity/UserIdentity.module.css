@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-evenly;
   width: 200px;
-  border: 1px solid var(--background-grey);
+  background-color: var(--background-grey);
   height: 50%;
   border-radius: var(--border-radius);
   padding: 10px;
@@ -26,4 +26,14 @@
 .user p {
   margin: 0;
   font-size: 0.7rem;
+}
+
+.btn {
+  border: none;
+  background: none;
+  color: var(--text-white);
+}
+
+.btn svg {
+  transform: scale(2);
 }

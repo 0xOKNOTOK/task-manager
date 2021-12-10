@@ -6,9 +6,11 @@ import {
   MdBackupTable,
   MdTask,
   MdInsertDriveFile,
-  MdCalendarToday
+  MdCalendarToday,
+  MdNotifications
 } from 'react-icons/md'
 import { UserIdentity } from '../UserIdentity/UserIdentity'
+import { ButtonIcon } from '../ButtonIcon/ButtonIcon'
 
 interface Props {
   title?: string
@@ -25,7 +27,12 @@ export const ProjectHeader = ({}: Props) => {
         <div className={styles.projectInfo}>
           <h1>Project Name</h1>
         </div>
-        <UserIdentity />
+        <div className={styles.userInfo}>
+          <ButtonIcon cssClass={styles.userNotifs} onClick={() => 1}>
+            {<MdNotifications />}
+          </ButtonIcon>
+          <UserIdentity />
+        </div>
       </div>
       <div className={styles.bottomBar}>
         <div className={styles.nav}>

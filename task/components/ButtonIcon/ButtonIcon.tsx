@@ -4,7 +4,7 @@ import styles from './ButtonIcon.module.css'
 interface Props {
   children: any
   onClick: MouseEventHandler<HTMLButtonElement>
-  cssClass: string
+  cssClass?: string
 }
 
 export const ButtonIcon = ({ children, onClick, cssClass }: Props) => {
