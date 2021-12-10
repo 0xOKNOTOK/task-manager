@@ -26,18 +26,23 @@ export const Navbar = () => {
   }
 
   return (
-    <nav className={styles.nav}>
+    <nav className={isNavExpanded ? styles.nav : styles.closedNav}>
       <div className={styles.brand}>
-        <h1>
-          <span className={styles.arrow}>{`> `}</span>task
+        <h1 className={isNavExpanded ? 'brandH1' : styles.closedBrand}>
+          <span className={styles.arrow}>{`> `}</span>
+          task
         </h1>
         {isNavExpanded ? (
-          <ButtonIcon onClick={toggleNavBar}>{<MdNavigateBefore />}</ButtonIcon>
+          <ButtonIcon cssClass={styles.btn} onClick={toggleNavBar}>
+            {<MdNavigateBefore />}
+          </ButtonIcon>
         ) : (
-          <ButtonIcon onClick={toggleNavBar}>{<MdNavigateNext />}</ButtonIcon>
+          <ButtonIcon cssClass={styles.closedNavToggle} onClick={toggleNavBar}>
+            {<MdNavigateNext />}
+          </ButtonIcon>
         )}
       </div>
-      <ul className={styles.ul}>
+      <ul className={isNavExpanded ? styles.ul : styles.closedUl}>
         <li className={styles.li}>
           <AnchorLink
             icon={<MdPeopleAlt className={styles.svg} />}
@@ -67,7 +72,7 @@ export const Navbar = () => {
           />
         </li>
       </ul>
-      <ul className={styles.ul}>
+      <ul className={isNavExpanded ? styles.ul : styles.closedUl}>
         <li className={styles.li}>
           <AnchorLink
             icon={<MdPayments className={styles.svg} />}
@@ -91,7 +96,7 @@ export const Navbar = () => {
         </li>
       </ul>
       <span></span>
-      <ul className={styles.ul}>
+      <ul className={isNavExpanded ? styles.ul : styles.closedUl}>
         <li className={styles.li}>
           <AnchorLink
             icon={<MdLogout className={styles.svg} />}

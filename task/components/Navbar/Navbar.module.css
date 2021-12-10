@@ -1,13 +1,14 @@
 .nav {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 10px 35px;
   height: 100vh;
-  width: 15%;
+  width: 300px;
   max-width: 300px;
   background-color: var(--background-grey);
-  border-right: 10px var(--element-aqua) solid;
+  border-right: 5px var(--element-aqua) solid;
 }
 
 .nav span {
@@ -35,4 +36,70 @@
 
 .arrow {
   color: var(--element-orange);
+}
+
+.closedNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 35px;
+  height: 100vh;
+  width: 5%;
+  max-width: 300px;
+  background-color: var(--background-grey);
+  border-right: 5px var(--element-aqua) solid;
+}
+
+.closedUl {
+  display: none;
+}
+
+.closedBrand {
+  display: none;
+}
+
+.closedNavToggle {
+  padding: 20px 0px;
+  border: none;
+  background: none;
+  color: var(--text-white);
+  transform: scale(3);
+  margin: 0;
+  margin: 0;
+  height: 10px;
+}
+
+.closedNavToggle:hover {
+  cursor: pointer;
+}
+
+.btn {
+  border: none;
+  background: none;
+  color: var(--text-white);
+  transform: scale(3);
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  height: 10px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.closedNav span {
+  height: 40vh;
+}
+
+@media screen and (min-width: 1000px) {
+  .nav {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .closedNav {
+    position: absolute;
+    z-index: 1;
+  }
 }
