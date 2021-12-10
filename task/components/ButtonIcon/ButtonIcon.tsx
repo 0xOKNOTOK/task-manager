@@ -5,11 +5,13 @@ interface Props {
   children: any
   onClick: MouseEventHandler<HTMLButtonElement>
   cssClass?: string
+  icon?: any
 }
 
-export const ButtonIcon = ({ children, onClick, cssClass }: Props) => {
+export const ButtonIcon = ({ children, onClick, cssClass, icon }: Props) => {
   return (
     <button onClick={onClick} className={cssClass}>
+      {icon}
       {children}
     </button>
   )
