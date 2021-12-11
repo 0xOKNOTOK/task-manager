@@ -15,10 +15,9 @@ import {
 } from 'react-icons/md'
 
 import { ButtonIcon } from '../ButtonIcon/ButtonIcon'
-import { Button } from '../Button/Button'
 
 export const Navbar = () => {
-  const [isNavExpanded, setIsNavExpanded] = useState(true)
+  const [isNavExpanded, setIsNavExpanded] = useState(false)
 
   const toggleNavBar = (event: any) => {
     event.preventDefault()

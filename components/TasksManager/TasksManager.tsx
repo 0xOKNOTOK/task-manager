@@ -12,7 +12,7 @@ export const TasksManager = () => {
         <SectionHeader sectionTitle='Review' dotColour='orange' />
         <SectionHeader sectionTitle='Done' dotColour='green' />
       </div>
-      <div className={styles.dd}>
+      <div className={styles.content}>
         <div className={styles.taskWrapper}>
           <Task className={styles.task} task={{}} />
         </div>

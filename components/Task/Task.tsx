@@ -1,6 +1,5 @@
 import React from 'react'
-import { FlexWrapper } from '../FlexWrapper/FlexWrapper'
-import styles from './Task.module.css'
+import { MdAddReaction, MdThumbUp, MdComment } from 'react-icons/md'
 
 interface Props {
   task: Task
@@ -17,11 +16,9 @@ interface Task {
 export const Task = ({ task, className }: Props) => {
   return (
     <div className={className}>
-      <h4>Task</h4>
-      <p>
-        blahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblX
-      </p>
-      <span></span>
+      <h4>Fix bugs agh!</h4>
+      <p>Someone ate my lunch today!</p>
+      <MdAddReaction /> <MdThumbUp /> <MdComment />
     </div>
   )
 }
