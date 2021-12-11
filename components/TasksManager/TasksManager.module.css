@@ -1,19 +1,36 @@
-.grid {
+.taskManager {
+  display: flex;
+  flex-direction: column;
   width: 90%;
-  grid-auto-flow: row;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1fr 1.5fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    '. . . .'
-    '. . . .'
-    '. . . .';
 }
 
-.columnTitles {
-  width: 100%;
+.headers {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  width: 100%;
+}
+.dd {
+  display: flex;
+}
+.taskWrapper {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  overflow-wrap: break-word;
+}
+
+.task {
+  background-color: var(--background-blue);
+  border-radius: var(--border-radius);
+  padding: 5px;
+}
+
+.task h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.task p {
+  font-size: 0.875rem;
+  font-weight: lighter;
 }

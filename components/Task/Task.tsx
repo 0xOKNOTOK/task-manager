@@ -1,8 +1,10 @@
 import React from 'react'
 import { FlexWrapper } from '../FlexWrapper/FlexWrapper'
+import styles from './Task.module.css'
 
 interface Props {
   task: Task
+  className: string
 }
 
 interface Task {
@@ -12,12 +14,14 @@ interface Task {
   comments?: Array<object> // TODO format of comments depends on the implementation on the backend.
 }
 
-export const Task = ({ task }: Props) => {
+export const Task = ({ task, className }: Props) => {
   return (
-    <FlexWrapper>
-      <h1></h1>
-      <p></p>
+    <div className={className}>
+      <h4>Task</h4>
+      <p>
+        blahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblX
+      </p>
       <span></span>
-    </FlexWrapper>
+    </div>
   )
 }

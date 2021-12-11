@@ -1,23 +1,31 @@
 import React from 'react'
-import { GridWrapper } from '../GridWrapper/GridWrapper'
 import { SectionHeader } from '../SectionHeader/SectionHeader'
+import { Task } from '../Task/Task'
 import styles from './TasksManager.module.css'
 
 export const TasksManager = () => {
   return (
-    <GridWrapper className={styles.grid}>
-      <div className={styles.columnTitles}>
-        <SectionHeader sectionTitle='To-do' dotColour='#C4C4C4' />
+    <div className={styles.taskManager}>
+      <div className={styles.headers}>
+        <SectionHeader sectionTitle='To-do' dotColour='lightgrey' />
+        <SectionHeader sectionTitle='Doing' dotColour='lightblue' />
+        <SectionHeader sectionTitle='Review' dotColour='orange' />
+        <SectionHeader sectionTitle='Done' dotColour='green' />
       </div>
-      <div className={styles.columnTitles}>
-        <SectionHeader sectionTitle='In Progress' dotColour='#11A6A6' />
+      <div className={styles.dd}>
+        <div className={styles.taskWrapper}>
+          <Task className={styles.task} task={{}} />
+        </div>
+        <div className={styles.taskWrapper}>
+          <Task className={styles.task} task={{}} />
+        </div>
+        <div className={styles.taskWrapper}>
+          <Task className={styles.task} task={{}} />
+        </div>
+        <div className={styles.taskWrapper}>
+          <Task className={styles.task} task={{}} />
+        </div>
       </div>
-      <div className={styles.columnTitles}>
-        <SectionHeader sectionTitle='In Review' dotColour='#F9896A' />
-      </div>
-      <div className={styles.columnTitles}>
-        <SectionHeader sectionTitle='Completed' dotColour='#21DE1D' />
-      </div>
-    </GridWrapper>
+    </div>
   )
 }
