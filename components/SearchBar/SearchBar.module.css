@@ -27,7 +27,7 @@
   font-family: 'Poppins';
   font-size: 1rem;
   color: var(--text-white);
-  border-bottom: 2px dashed var(--element-orange);
+  border-bottom: 2px solid var(--text-grey);
   transition: var(--transition-speed) ease-in;
 }
 
@@ -42,7 +42,6 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  color: var(--text-white);
   border-radius: var(--border-radius);
   height: 45px;
   width: 104px;
@@ -59,13 +58,14 @@
 
 .newTask {
   border: none;
-  background-color: var(--element-orange);
+  color: var(--background-blue);
+  background-color: var(--text-white);
 }
 
 .newTask:hover {
   transition: var(--transition-speed) ease-in;
-  background-color: var(--text-white);
-  color: var(--background-grey);
+  background-color: var(--element-orange);
+  color: var(--text-white);
 }
 
 .newTask svg {
@@ -73,6 +73,7 @@
 }
 
 .filterBtn {
+  color: var(--text-white);
   background: none;
   border: 1px solid var(--background-grey);
 }
