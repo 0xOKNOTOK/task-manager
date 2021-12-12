@@ -1,5 +1,11 @@
 import React from 'react'
-import { MdAddReaction, MdThumbUp, MdComment } from 'react-icons/md'
+import styles from './Task.module.css'
+import {
+  MdAddReaction,
+  MdThumbUp,
+  MdComment,
+  MdArrowForward
+} from 'react-icons/md'
 
 interface Props {
   task: Task
@@ -18,7 +24,14 @@ export const Task = ({ task, className }: Props) => {
     <div className={className}>
       <h4>Fix bugs agh!</h4>
       <p>Someone ate my lunch today!</p>
-      <MdAddReaction /> <MdThumbUp /> <MdComment />
+      <div className={styles.reactions}>
+        <div>
+          <MdAddReaction /> <MdThumbUp /> <MdComment />
+        </div>
+        <div className={styles.open}>
+          <MdArrowForward />
+        </div>
+      </div>
     </div>
   )
 }

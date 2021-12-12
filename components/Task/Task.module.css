@@ -1,0 +1,10 @@
+.reactions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.open {
+  transform: scale(1.3);
+}

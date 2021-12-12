@@ -43,3 +43,8 @@
   transform: scale(1);
   margin-right: 10px;
 }
+
+.reactions {
+  display: flex;
+  flex-direction: row;
+}
