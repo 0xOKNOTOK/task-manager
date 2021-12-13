@@ -25,23 +25,28 @@ export const Task = ({ task, className }: Props) => {
     <div className={className}>
       <h4>Fix bugs agh!</h4>
       <p>Someone ate my lunch today!</p>
-      <div className={styles.reactions}>
+      <div className={styles.functions}>
         <div>
-          <ButtonIcon cssClass={styles.reaction} onClick={() => []}>
+          <ButtonIcon cssClass={styles.fn} onClick={() => []}>
             <MdAddReaction />
           </ButtonIcon>
-          <ButtonIcon cssClass={styles.reaction} onClick={() => []}>
+          <ButtonIcon cssClass={styles.fn} onClick={() => []}>
             <MdThumbUp />
           </ButtonIcon>
-          <ButtonIcon cssClass={styles.reaction} onClick={() => {}}>
+          <ButtonIcon cssClass={styles.fn} onClick={() => {}}>
             <MdComment />
           </ButtonIcon>
         </div>
         <div className={styles.open}>
-          <ButtonIcon onClick={() => {}} cssClass={styles.reaction}>
+          <ButtonIcon onClick={() => {}} cssClass={styles.fn}>
             <MdArrowForward />
           </ButtonIcon>
         </div>
+      </div>
+      <div className={styles.reactions}>
+        <span>✨</span>
+        <span>🤦</span>
+        <span>😃</span>
       </div>
     </div>
   )
