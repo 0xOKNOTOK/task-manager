@@ -8,6 +8,7 @@ if (!FirebaseAdmin.apps.length) {
       privateKey: serviceAccount.private_key,
       clientEmail: serviceAccount.client_email,
       projectId: serviceAccount.project_id
-    })
+    }),
+    databaseURL: `https://${serviceAccount.project_id}.firebaseio.com`
   })
 }
