@@ -19,7 +19,7 @@
   width: 300px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 30px;
   border-radius: var(--border-radius);
   background-color: var(--background-blue);
   transition: var(--transition-speed) ease-in;
@@ -36,7 +36,7 @@
   border: none;
   padding: 10px;
   border-radius: var(--border-radius);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: var(--text-white);
   font-family: 'Poppins';
 }
@@ -50,7 +50,7 @@
   color: var(--text-white);
   border: none;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border: 1px solid var(--element-aqua);
   border-radius: var(--border-radius);
   font-family: 'Poppins';
@@ -60,4 +60,9 @@
   background-color: var(--element-aqua);
   cursor: pointer;
   transition: var(--transition-speed) ease;
+}
+
+.login h3 {
+  font-weight: 700;
+  text-transform: uppercase;
 }

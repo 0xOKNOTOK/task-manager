@@ -12,7 +12,7 @@ const Login = (_props: any) => {
         <span>{`> `}</span>task
       </h1>
       <div className={styles.login}>
-        <h3>Account Login</h3>
+        <h3>ACCOUNT</h3>
         <input
           value={email}
           onChange={e => setEmail(e.target.value)}
