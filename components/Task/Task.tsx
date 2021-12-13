@@ -6,6 +6,7 @@ import {
   MdComment,
   MdArrowForward
 } from 'react-icons/md'
+import { ButtonIcon } from '../ButtonIcon/ButtonIcon'
 
 interface Props {
   task: Task
@@ -26,10 +27,20 @@ export const Task = ({ task, className }: Props) => {
       <p>Someone ate my lunch today!</p>
       <div className={styles.reactions}>
         <div>
-          <MdAddReaction /> <MdThumbUp /> <MdComment />
+          <ButtonIcon cssClass={styles.reaction} onClick={() => []}>
+            <MdAddReaction />
+          </ButtonIcon>
+          <ButtonIcon cssClass={styles.reaction} onClick={() => []}>
+            <MdThumbUp />
+          </ButtonIcon>
+          <ButtonIcon cssClass={styles.reaction} onClick={() => {}}>
+            <MdComment />
+          </ButtonIcon>
         </div>
         <div className={styles.open}>
-          <MdArrowForward />
+          <ButtonIcon onClick={() => {}} cssClass={styles.reaction}>
+            <MdArrowForward />
+          </ButtonIcon>
         </div>
       </div>
     </div>

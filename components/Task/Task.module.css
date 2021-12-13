@@ -8,3 +8,19 @@
 .open {
   transform: scale(1.3);
 }
+
+.reaction {
+  border: none;
+  background: none;
+  transform: scale(1.3);
+}
+
+.reaction:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.reaction svg:hover {
+  color: white;
+  transition: var(--transition-speed);
+}
