@@ -1,6 +1,6 @@
 import firebaseClient from 'firebase/app'
 import 'firebase/auth'
-import { firebaseConfig } from './firebase-cfg/firebase.config'
+import firebaseConfig from './firebase-cfg/firebase.config'
 
 if (typeof window !== 'undefined' && !firebaseClient.apps.length) {
   firebaseClient.initializeApp(firebaseConfig)

@@ -1,4 +1,4 @@
-import * as firebaseAdmin from 'firebase-admin'
+import firebaseAdmin from 'firebase-admin'
 
 var serviceAccount = require('./sec.json')
 
