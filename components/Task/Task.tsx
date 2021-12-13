@@ -24,7 +24,10 @@ export const Task = ({ task, className }: Props) => {
   return (
     <div className={className}>
       <h4>Fix bugs agh!</h4>
-      <p>Someone ate my lunch today!</p>
+      <p>
+        Need to fix the user Auth for sign ins on google accounts, check your
+        emails for updates!
+      </p>
       <div className={styles.functions}>
         <div>
           <ButtonIcon cssClass={styles.fn} onClick={() => []}>
