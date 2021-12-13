@@ -8,7 +8,6 @@ import { Footer } from '../components/Footer/Footer'
 const Settings: NextPage = () => {
   return (
     <div className={styles.container}>
-      <Head></Head>
       <main></main>
 
       <Footer />
