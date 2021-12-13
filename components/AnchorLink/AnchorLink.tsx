@@ -6,12 +6,13 @@ interface Props {
   reference: string
   linkLabel: string
   icon?: any
+  onClick?: any
 }
 
-export const AnchorLink = ({ reference, linkLabel, icon }: Props) => {
+export const AnchorLink = ({ reference, linkLabel, icon, onClick }: Props) => {
   return (
     <Link href={reference}>
-      <a className={styles.base}>
+      <a onClick={onClick} className={styles.base}>
         {icon ? icon : null}
         <p>{linkLabel}</p>
       </a>

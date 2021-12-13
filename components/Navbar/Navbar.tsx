@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import styles from './Navbar.module.css'
 import { AnchorLink } from '../AnchorLink/AnchorLink'
+import { firebaseClient } from '../../utils/firebaseClient'
+import { useRouter } from 'next/router'
 import {
   MdPeopleAlt,
   MdSpaceDashboard,
@@ -18,6 +20,8 @@ import { ButtonIcon } from '../ButtonIcon/ButtonIcon'
 
 export const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
+
+  const router = useRouter()
 
   const toggleNavBar = (event: any) => {
     event.preventDefault()
@@ -99,7 +103,15 @@ export const Navbar = () => {
         <li className={styles.li}>
           <AnchorLink
             icon={<MdLogout className={styles.svg} />}
-            reference='/logout'
+            reference='/auth'
+            onClick={async () => {
+              await firebaseClient
+                .auth()
+                .signOut()
+                .then(() => {
+                  router.push('/')
+                })
+            }}
             linkLabel='Log out'
           />
         </li>
