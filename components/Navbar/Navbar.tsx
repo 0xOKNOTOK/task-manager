@@ -109,7 +109,7 @@ export const Navbar = () => {
                 .auth()
                 .signOut()
                 .then(() => {
-                  router.push('/')
+                  router.push('/login')
                 })
             }}
             linkLabel='Log out'
