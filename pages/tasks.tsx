@@ -1,15 +1,13 @@
 import React from 'react'
+import nookies from 'nookies'
 import styles from '../styles/Test.module.css'
+
 import { Navbar } from '../components/Navbar/Navbar'
 import { ProjectHeader } from '../components/ProjectHeader/ProjectHeader'
 import { SearchBar } from '../components/SearchBar/SearchBar'
 import { FlexWrapper } from '../components/FlexWrapper/FlexWrapper'
 import { TasksManager } from '../components/TasksManager/TasksManager'
-
-import nookies from 'nookies'
-import { useRouter } from 'next/router'
 import { firebaseAdmin } from '../utils/firebaseAdmin'
-
 import { InferGetServerSidePropsType, GetServerSidePropsContext } from 'next'
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
@@ -19,26 +17,16 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     const token = await firebaseAdmin.auth().verifyIdToken(cookies.token)
     const { uid, email } = token
 
-    // the user is authenticated!
-    // FETCH STUFF HERE
-
+    // fetch data from firebase (user details & task etc.)
     return {
       props: { message: `Your email is ${email} and your UID is ${uid}.` }
     }
   } catch (err) {
-    // either the `token` cookie didn't exist
-    // or token verification failed
-    // either way: redirect to the login page
-    // either the `token` cookie didn't exist
-    // or token verification failed
-    // either way: redirect to the login page
     return {
       redirect: {
         permanent: false,
         destination: '/login'
       },
-      // `as never` is required for correct type inference
-      // by InferGetServerSidePropsType below
       props: {} as never
     }
   }

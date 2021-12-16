@@ -103,7 +103,7 @@ export const Navbar = () => {
         <li className={styles.li}>
           <AnchorLink
             icon={<MdLogout className={styles.svg} />}
-            reference='/auth'
+            reference='/login'
             onClick={async () => {
               await firebaseClient
                 .auth()
