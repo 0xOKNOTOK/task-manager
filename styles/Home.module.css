@@ -1,0 +1,44 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.main {
+  height: 90vh;
+  flex-direction: column;
+}
+
+.flex {
+  height: 800px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+}
+
+.flex h4 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.flex button {
+  margin: 20px;
+  font-family: 'Poppins';
+  background-color: var(--text-white);
+  font-size: 0.875rem;
+  padding-block: 12px;
+  font-weight: 400;
+  transition: var(--transition-speed) ease;
+}
+
+.flex button:hover {
+  color: var(--text-white);
+}

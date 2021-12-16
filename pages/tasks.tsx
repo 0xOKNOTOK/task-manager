@@ -40,7 +40,6 @@ const Tasks = (
       <FlexWrapper className={styles.flexWrapper}>
         <ProjectHeader />
         <SearchBar />
-        {props.message}
         <TasksManager />
       </FlexWrapper>
     </main>
