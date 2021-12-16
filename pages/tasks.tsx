@@ -44,10 +44,9 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   }
 }
 
-const Test = (
+const Tasks = (
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) => {
-  const router = useRouter()
   return (
     <main>
       <Navbar />
@@ -61,4 +60,4 @@ const Test = (
   )
 }
 
-export default Test
+export default Tasks
