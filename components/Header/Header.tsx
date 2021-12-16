@@ -1,13 +1,11 @@
-import react from "react"
+import react from 'react'
 import styles from './Header.module.css'
 
-
-
 interface Props {
-    project: Object,
+  className: string
+  children: React.ReactNode
 }
 
-export const Header = ({project}: Props) => {
-    return <header className={styles.base}>
-    </header>
+export const Header = ({ children, className }: Props) => {
+  return <header className={className}>{children}</header>
 }

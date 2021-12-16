@@ -7,12 +7,19 @@ interface Props {
   linkLabel: string
   icon?: any
   onClick?: any
+  className?: string
 }
 
-export const AnchorLink = ({ reference, linkLabel, icon, onClick }: Props) => {
+export const AnchorLink = ({
+  reference,
+  linkLabel,
+  icon,
+  onClick,
+  className
+}: Props) => {
   return (
     <Link href={reference}>
-      <a onClick={onClick} className={styles.base}>
+      <a onClick={onClick} className={className ? className : styles.base}>
         {icon ? icon : null}
         <p>{linkLabel}</p>
       </a>

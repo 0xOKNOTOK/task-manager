@@ -6,6 +6,8 @@ import styles from '../styles/Home.module.css'
 import { Button } from '../components/Button/Button'
 import { Footer } from '../components/Footer/Footer'
 import { FlexWrapper } from '../components/FlexWrapper/FlexWrapper'
+import { Header } from '../components/Header/Header'
+import { AnchorLink } from '../components/AnchorLink/AnchorLink'
 
 // Assets
 
@@ -22,6 +24,14 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <Header className={styles.header}>
+          <h1>{'> task'}</h1>
+          <AnchorLink
+            className={styles.headerlink}
+            reference='https://github.com/rossgr/task-manager'
+            linkLabel='Github'
+          ></AnchorLink>
+        </Header>
         <FlexWrapper className={styles.flex}>
           <h1>{`Task management for your projects.`}</h1>
           <h4>{`Card based management system designed to speed up development within small teams.`}</h4>
@@ -38,8 +48,6 @@ const Home: NextPage = () => {
           <div className={styles.feature}></div>
         </FlexWrapper>
       </main>
-
-      <Footer />
     </div>
   )
 }
