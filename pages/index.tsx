@@ -25,7 +25,9 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <Header className={styles.header}>
-          <h1>{'> task'}</h1>
+          <h1>
+            <span className={styles.arrow}>{'> '}</span> task
+          </h1>
           <AnchorLink
             className={styles.headerlink}
             reference='https://github.com/rossgr/task-manager'

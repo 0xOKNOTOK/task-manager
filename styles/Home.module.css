@@ -4,6 +4,13 @@
 }
 
 .main {
+  background: linear-gradient(135deg, #242937 25%, transparent 25%) -89px 0/
+      178px 178px,
+    linear-gradient(225deg, rgba(36, 41, 55, 0.5) 25%, transparent 25%) -89px 0/
+      178px 178px,
+    linear-gradient(315deg, #242937 25%, transparent 25%) 0 0/ 178px 178px,
+    linear-gradient(45deg, rgba(36, 41, 55, 0.5) 25%, #181b25 25%) 0 0/ 178px 178px;
+  background-color: #181b25;
   height: 90vh;
   flex-direction: column;
 }
@@ -66,4 +73,8 @@
 
 .flex button:hover {
   color: var(--text-white);
+}
+
+.arrow {
+  color: var(--element-orange);
 }
