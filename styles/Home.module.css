@@ -6,13 +6,6 @@
 .main {
   height: 100%;
   flex-direction: column;
-  background: linear-gradient(135deg, #242937 25%, transparent 25%) -89px 0/
-      178px 178px,
-    linear-gradient(225deg, rgba(36, 41, 55, 0.5) 25%, transparent 25%) -89px 0/
-      178px 178px,
-    linear-gradient(315deg, #242937 25%, transparent 25%) 0 0/ 178px 178px,
-    linear-gradient(45deg, rgba(36, 41, 55, 0.5) 25%, #181b25 25%) 0 0/ 178px 178px;
-  background-color: #181b25;
 }
 
 .header {
@@ -41,8 +34,7 @@
 }
 
 .flex {
-  margin-top: 5%;
-  height: 800px;
+  margin-block: 10%;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -55,7 +47,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 50%;
 }
 
 .landing h1 {
@@ -82,6 +73,7 @@
   color: var(--background-blue);
   transition: var(--transition-speed) ease;
   border: 1px solid var(--text-white);
+  font-weight: 500;
 }
 
 .landing a:hover {
@@ -124,4 +116,79 @@
 
 .feature p {
   font-size: 0.875rem;
+}
+
+@media screen and (max-width: 800px) {
+  .features {
+    flex-direction: column;
+  }
+
+  .flex {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .landing {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 20;
+  }
+
+  .landing h1 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-block: 10px;
+    padding: 0;
+  }
+
+  .landing h4 {
+    margin-block: 10px;
+    font-weight: 400;
+    font-size: 0.7rem;
+  }
+
+  .landing a {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 800px) {
+  .features {
+    flex-direction: column;
+  }
+
+  .flex {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .landing {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 20;
+  }
+
+  .landing h1 {
+    font-size: 2.3rem;
+    font-weight: bolder;
+    margin-block: 10px;
+    padding: 0;
+  }
+
+  .landing h4 {
+    width: 50%;
+    margin-block: 10px;
+    font-weight: 400;
+    font-size: 0.875rem;
+  }
+
+  .landing a {
+    padding: 15px;
+  }
 }

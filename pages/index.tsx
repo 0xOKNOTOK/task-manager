@@ -33,7 +33,7 @@ const Home: NextPage = () => {
           <AnchorLink
             className={styles.headerlink}
             reference='https://github.com/rossgr/task-manager'
-            linkLabel='Github'
+            linkLabel='> Github'
           ></AnchorLink>
         </Header>
         <FlexWrapper className={styles.flex}>
@@ -42,31 +42,31 @@ const Home: NextPage = () => {
             <h4>{`Card based management system designed to speed up development within small teams.`}</h4>
             <AnchorLink linkLabel='> Login' reference='/login' />
           </div>
-          <FlexWrapper className={styles.features}>
-            <div className={styles.feature}>
-              <TiGroup />
-              <h5>Work Together</h5>
-              <p>
-                Create teams with members to begin working on a new project
-                together.
-              </p>
-            </div>
-            {'>_'}
-            <div className={styles.feature}>
-              <GoMarkdown />
-              <h5>Markdown Styling</h5>
-              <p>
-                Built in markdown stying for increased organisation on
-                individual tasks.
-              </p>
-            </div>
-            {'>_'}
-            <div className={styles.feature}>
-              <MdMarkChatUnread />
-              <h5>Communcation built in</h5>
-              <p>Built in discord support, live chat and comment system.</p>
-            </div>
-          </FlexWrapper>
+        </FlexWrapper>
+        <FlexWrapper className={styles.features}>
+          <div className={styles.feature}>
+            <TiGroup />
+            <h5>Work Together</h5>
+            <p>
+              Create teams with members to begin working on a new project
+              together.
+            </p>
+          </div>
+          {'>_'}
+          <div className={styles.feature}>
+            <GoMarkdown />
+            <h5>Markdown Styling</h5>
+            <p>
+              Built in markdown stying for increased organisation on individual
+              tasks.
+            </p>
+          </div>
+          {'>_'}
+          <div className={styles.feature}>
+            <MdMarkChatUnread />
+            <h5>Communcation built in</h5>
+            <p>Built in discord support, live chat and comment system.</p>
+          </div>
         </FlexWrapper>
       </main>
     </div>
