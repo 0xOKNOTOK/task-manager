@@ -40,7 +40,7 @@ const Home: NextPage = () => {
           <div className={styles.landing}>
             <h1>{`Task management for your projects.`}</h1>
             <h4>{`Card based management system designed to speed up development within small teams.`}</h4>
-            <Button buttonLabel={'Login >'} onClick={() => 1}></Button>
+            <AnchorLink linkLabel='> Login' reference='/login' />
           </div>
           <FlexWrapper className={styles.features}>
             <div className={styles.feature}>

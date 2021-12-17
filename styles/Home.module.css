@@ -71,18 +71,24 @@
   font-size: 1.2rem;
 }
 
-.landing button {
+.landing a {
   margin: 20px;
   font-family: 'Poppins';
   background-color: var(--text-white);
   font-size: 0.875rem;
-  padding-block: 12px;
+  padding: 25px;
+  border-radius: var(--border-radius);
   font-weight: 400;
+  color: var(--background-blue);
   transition: var(--transition-speed) ease;
+  border: 1px solid var(--text-white);
 }
 
-.landing button:hover {
+.landing a:hover {
   color: var(--text-white);
+  background-color: var(--background-blue);
+  border: 1px solid var(--text-white);
+  transition: var(--transition-speed) ease;
 }
 
 .arrow {
