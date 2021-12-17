@@ -4,7 +4,7 @@
 }
 
 .main {
-  height: 90vh;
+  height: 100%;
   flex-direction: column;
   background: linear-gradient(135deg, #242937 25%, transparent 25%) -89px 0/
       178px 178px,
@@ -47,22 +47,31 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.flex h1 {
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50%;
+}
+
+.landing h1 {
   font-size: 4rem;
   font-weight: bolder;
   margin: 0;
   padding: 0;
 }
 
-.flex h4 {
+.landing h4 {
   margin: 0;
   font-weight: 400;
   font-size: 1.2rem;
 }
 
-.flex button {
+.landing button {
   margin: 20px;
   font-family: 'Poppins';
   background-color: var(--text-white);
@@ -72,7 +81,7 @@
   transition: var(--transition-speed) ease;
 }
 
-.flex button:hover {
+.landing button:hover {
   color: var(--text-white);
 }
 
@@ -95,9 +104,16 @@
   width: 20%;
 }
 
+.feature svg {
+  transform: scale(2.3);
+  color: var(--element-orange);
+  margin: 22px;
+}
+
 .feature h5 {
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin: 0;
+  color: var(--text-white);
 }
 
 .feature p {
