@@ -44,10 +44,23 @@ const Home: NextPage = () => {
         </FlexWrapper>
         <FlexWrapper className={styles.features}>
           <div className={styles.feature}>
-            <h5></h5>
+            <h5>Work Together</h5>
+            <p>
+              Create teams with members to begin working on a new project
+              together.
+            </p>
           </div>
-          <div className={styles.feature}></div>
-          <div className={styles.feature}></div>
+          <div className={styles.feature}>
+            <h5>Markdown Styling</h5>
+            <p>
+              Built in markdown stying for increased organisation on individual
+              tasks.
+            </p>
+          </div>
+          <div className={styles.feature}>
+            <h5>Communcation built in</h5>
+            <p>Built in discord support, live chat and comment system.</p>
+          </div>
         </FlexWrapper>
       </main>
     </div>
