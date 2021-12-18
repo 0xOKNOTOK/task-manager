@@ -153,9 +153,6 @@
   .landing a {
     padding: 15px;
   }
-  .features {
-    margin-bottom: 20px;
-  }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 800px) {
@@ -191,7 +188,7 @@
     font-size: 0.875rem;
   }
 
-  .features {
-    margin-bottom: 20px;
+  .landing a {
+    padding: 15px;
   }
 }
