@@ -1,5 +1,5 @@
 import firebaseAdmin from 'firebase-admin'
-
+import 'firebase/firestore'
 var serviceAccount = require('./sec.json')
 
 if (!firebaseAdmin.apps.length) {
@@ -9,4 +9,6 @@ if (!firebaseAdmin.apps.length) {
   })
 }
 
-export { firebaseAdmin }
+const db = firebaseAdmin.firestore()
+
+export { firebaseAdmin, db }
