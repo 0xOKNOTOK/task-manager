@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import nookies from 'nookies'
 import styles from '../styles/Test.module.css'
 
@@ -16,7 +16,6 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     const token = await firebaseAdmin.auth().verifyIdToken(cookies.token)
     const { uid, email } = token
 
-    // fetch data from firebase (user details & task etc.)
     return {
       props: { message: `Your email is ${email} and your UID is ${uid}.` }
     }
