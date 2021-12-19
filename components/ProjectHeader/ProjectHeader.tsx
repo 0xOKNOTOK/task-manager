@@ -15,12 +15,12 @@ import { ButtonIcon } from '../ButtonIcon/ButtonIcon'
 interface Props {
   title?: string
   author?: string
-  user?: Object
+  user: object | undefined
   date?: string
   links?: Array<object>
 }
 
-export const ProjectHeader = ({}: Props) => {
+export const ProjectHeader = ({ user }: Props) => {
   return (
     <div className={styles.base}>
       <div className={styles.topBar}>
@@ -31,7 +31,7 @@ export const ProjectHeader = ({}: Props) => {
           <ButtonIcon cssClass={styles.userNotifs} onClick={() => 1}>
             {<MdNotifications />}
           </ButtonIcon>
-          <UserIdentity />
+          <UserIdentity user={user} />
         </div>
       </div>
       <div className={styles.bottomBar}>

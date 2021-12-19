@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import nookies from 'nookies'
 import styles from '../styles/Test.module.css'
 
@@ -16,8 +16,9 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     const token = await firebaseAdmin.auth().verifyIdToken(cookies.token)
     const { uid, email } = token
 
+    // Fetch data and return as props.
     return {
-      props: { message: `Your email is ${email} and your UID is ${uid}.` }
+      props: { user: [uid] }
     }
   } catch (err) {
     return {
@@ -33,11 +34,15 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
 const Tasks = (
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) => {
+  const [user, setUser] = useState(props)
+
+  console.log(user)
+
   return (
     <main>
       <Navbar />
       <FlexWrapper className={styles.flexWrapper}>
-        <ProjectHeader />
+        <ProjectHeader user={user} />
         <SearchBar />
         <TasksManager />
       </FlexWrapper>
