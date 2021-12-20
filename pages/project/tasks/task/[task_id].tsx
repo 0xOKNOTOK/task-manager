@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import nookies from 'nookies'
-import styles from '../../styles/Test.module.css'
+import styles from '../../../styles/Test.module.css'
 
-import { Navbar } from '../../components/Navbar/Navbar'
-import { ProjectHeader } from '../../components/ProjectHeader/ProjectHeader'
-import { SearchBar } from '../../components/SearchBar/SearchBar'
-import { FlexWrapper } from '../../components/FlexWrapper/FlexWrapper'
-import { TasksManager } from '../../components/TasksManager/TasksManager'
-import { firebaseAdmin } from '../../utils/firebaseAdmin'
+import { Navbar } from '../../../components/Navbar/Navbar'
+import { ProjectHeader } from '../../../components/ProjectHeader/ProjectHeader'
+import { FlexWrapper } from '../../../components/FlexWrapper/FlexWrapper'
+import { firebaseAdmin } from '../../../utils/firebaseAdmin'
 import { InferGetServerSidePropsType, GetServerSidePropsContext } from 'next'
-import { useRouter } from 'next/router'
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   try {
@@ -17,7 +14,7 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     const token = await firebaseAdmin.auth().verifyIdToken(cookies.token)
     const { uid, email } = token
 
-    console.log(ctx.params)
+    console.log('Testing nested route', ctx.params)
 
     // Fetch data and return as props.
     return {
@@ -44,8 +41,6 @@ const Tasks = (
       <Navbar />
       <FlexWrapper className={styles.flexWrapper}>
         <ProjectHeader user={user} />
-        <SearchBar />
-        <TasksManager />
       </FlexWrapper>
     </main>
   )
