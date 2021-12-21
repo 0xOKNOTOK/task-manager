@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import nookies from 'nookies'
 import styles from '../../styles/Test.module.css'
 
-import { Navbar } from '../../../../components/Navbar/Navbar'
-import { ProjectHeader } from '../../../../components/ProjectHeader/ProjectHeader'
-import { SearchBar } from '../../../../components/SearchBar/SearchBar'
-import { FlexWrapper } from '../../../../components/FlexWrapper/FlexWrapper'
-import { TasksManager } from '../../../../components/TasksManager/TasksManager'
-import { firebaseAdmin } from '../../../../utils/firebaseAdmin'
+import { Navbar } from '../../components/Navbar/Navbar'
+import { ProjectHeader } from '../../components/ProjectHeader/ProjectHeader'
+import { SearchBar } from '../../components/SearchBar/SearchBar'
+import { FlexWrapper } from '../../components/FlexWrapper/FlexWrapper'
+import { TasksManager } from '../../components/TasksManager/TasksManager'
+import { firebaseAdmin } from '../../utils/firebaseAdmin'
 import { InferGetServerSidePropsType, GetServerSidePropsContext } from 'next'
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
