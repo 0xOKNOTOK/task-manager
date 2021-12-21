@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import nookies from 'nookies'
+import { db } from '../../../../../utils/firebaseAdmin'
 import styles from '../../../../../styles/Test.module.css'
 
 import { Navbar } from '../../../../../components/Navbar/Navbar'
@@ -16,7 +17,6 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
 
     console.log('Testing nested route', ctx.params)
 
-    // Fetch data and return as props.
     return {
       props: { user: [uid] }
     }
