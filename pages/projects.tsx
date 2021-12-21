@@ -1,21 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import nookies from 'nookies'
-import { db } from '../utils/firebaseAdmin'
-import styles from '../../../../../styles/Test.module.css'
+import styles from '../styles/Projects.module.css'
 
 import { Navbar } from '../components/Navbar/Navbar'
-import { ProjectHeader } from '../components/ProjectHeader/ProjectHeader'
 import { FlexWrapper } from '../components/FlexWrapper/FlexWrapper'
 import { firebaseAdmin } from '../utils/firebaseAdmin'
 import { InferGetServerSidePropsType, GetServerSidePropsContext } from 'next'
+import ProjectCard from '../components/ProjectCard/ProjectCard'
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   try {
     const cookies = nookies.get(ctx)
     const token = await firebaseAdmin.auth().verifyIdToken(cookies.token)
     const { uid, email } = token
-
-    console.log('Testing nested route', ctx.params)
 
     return {
       props: { user: [uid] }
@@ -31,19 +28,26 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   }
 }
 
-const Tasks = (
+const ProjectsPage = (
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) => {
-  const [user, setUser] = useState(props)
-
+  const tempData = {
+    title: 'Example',
+    author: props.user.toString(),
+    description: 'Web application built with React and Express.',
+    members: []
+  }
   return (
     <main>
       <Navbar />
       <FlexWrapper className={styles.flexWrapper}>
-        <ProjectHeader user={user} />
+        <h1>Projects</h1>
+      </FlexWrapper>
+      <FlexWrapper className={styles.projectsContainer}>
+        <ProjectCard project={tempData} />
       </FlexWrapper>
     </main>
   )
 }
 
-export default Tasks
+export default ProjectsPage
