@@ -42,7 +42,6 @@
 .closedNav {
   min-width: 200px;
   position: absolute;
-  transition: var(--transition-speed) ease-out;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

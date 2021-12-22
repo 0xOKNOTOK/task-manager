@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import nookies from 'nookies'
-import styles from '../../../../styles/Task.module.css'
+import styles from '../../../styles/Tasks.module.css'
 
 import { Navbar } from '../../../../components/Navbar/Navbar'
 import { ProjectHeader } from '../../../../components/ProjectHeader/ProjectHeader'
+import { SearchBar } from '../../../../components/SearchBar/SearchBar'
 import { FlexWrapper } from '../../../../components/FlexWrapper/FlexWrapper'
+import { TasksManager } from '../../../../components/TasksManager/TasksManager'
 import { firebaseAdmin } from '../../../../utils/firebaseAdmin'
 import { InferGetServerSidePropsType, GetServerSidePropsContext } from 'next'
 
@@ -14,8 +16,10 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     const token = await firebaseAdmin.auth().verifyIdToken(cookies.token)
     const { uid, email } = token
 
-    console.log('Testing nested route', ctx.params)
-
+    if (ctx?.params?.tasks_id === 'task') {
+      console.log('error 404')
+    }
+    // Fetch data and return as props.
     return {
       props: { user: [uid] }
     }
@@ -40,9 +44,8 @@ const Tasks = (
       <Navbar />
       <FlexWrapper className={styles.flexWrapper}>
         <ProjectHeader user={user} />
-        <FlexWrapper className={styles.task}>
-          <input></input>
-        </FlexWrapper>
+        <SearchBar />
+        <TasksManager />
       </FlexWrapper>
     </main>
   )
