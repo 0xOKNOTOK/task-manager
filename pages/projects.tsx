@@ -40,12 +40,17 @@ const ProjectsPage = (
   return (
     <main>
       <Navbar />
-      <FlexWrapper className={styles.flexWrapper}>
-        <h1>Projects</h1>
-      </FlexWrapper>
-      <FlexWrapper className={styles.projectsContainer}>
-        <ProjectCard project={tempData} />
-      </FlexWrapper>
+      <div className={styles.page}>
+        <FlexWrapper className={styles.header}>
+          <h1>Projects</h1>
+        </FlexWrapper>
+        <FlexWrapper className={styles.projectsContainer}>
+          <ProjectCard project={tempData} />
+          <ProjectCard project={tempData} />
+          <ProjectCard project={tempData} />
+          <ProjectCard project={tempData} />
+        </FlexWrapper>
+      </div>
     </main>
   )
 }

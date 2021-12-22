@@ -1,0 +1,14 @@
+.base {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-blue);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--element-orange);
+}
+
+.base:hover {
+  transition: var(--transition-speed) ease-in;
+  border: 2px solid var(--element-aqua);
+  cursor: pointer;
+}

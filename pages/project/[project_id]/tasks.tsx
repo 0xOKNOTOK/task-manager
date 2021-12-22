@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import nookies from 'nookies'
-import styles from '../../styles/Test.module.css'
+import styles from '../../../styles/Tasks.module.css'
 
 import { Navbar } from '../../../components/Navbar/Navbar'
 import { ProjectHeader } from '../../../components/ProjectHeader/ProjectHeader'

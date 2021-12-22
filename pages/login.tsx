@@ -37,7 +37,7 @@ const Login = (_props: any) => {
         <button
           onClick={async () => {
             await firebaseClient.auth().signInWithEmailAndPassword(email, pass)
-            window.location.href = '/tasks/1'
+            window.location.href = '/projects'
           }}
         >
           Log in
