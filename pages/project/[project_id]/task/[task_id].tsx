@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import nookies from 'nookies'
-import { db } from '../../../../utils/firebaseAdmin'
-import styles from '../../../../../styles/Test.module.css'
+import styles from '../../../../styles/Task.module.css'
 
 import { Navbar } from '../../../../components/Navbar/Navbar'
 import { ProjectHeader } from '../../../../components/ProjectHeader/ProjectHeader'
@@ -41,6 +40,9 @@ const Tasks = (
       <Navbar />
       <FlexWrapper className={styles.flexWrapper}>
         <ProjectHeader user={user} />
+        <FlexWrapper className={styles.task}>
+          <input></input>
+        </FlexWrapper>
       </FlexWrapper>
     </main>
   )
