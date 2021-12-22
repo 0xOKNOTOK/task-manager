@@ -21,3 +21,28 @@
     '. . .'
     '. . .';
 }
+
+@media screen and (max-width: 1200px) and (min-width: 800px) {
+  .projectsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.5fr 1.5fr;
+    gap: 25px 25px;
+    grid-template-areas:
+      '. .'
+      '. .'
+      '. .';
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .projectsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr;
+    grid-template-areas:
+      '.'
+      '.'
+      '.';
+  }
+}
