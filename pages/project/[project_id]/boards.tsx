@@ -25,9 +25,9 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     const cookies = nookies.get(ctx)
     const token = await firebaseAdmin.auth().verifyIdToken(cookies.token)
     const { uid, email } = token
-    fetchBoards()
+    const boards = fetchBoards()
     return {
-      props: { user: [email, uid] }
+      props: { user: [email, uid], data: [boards.toString()] }
     }
   } catch (err) {
     return {
@@ -48,7 +48,7 @@ const Boards = (
       <Navbar />
       <FlexWrapper className={styles.flexWrapper}>
         <h1>a</h1>
-        <SearchBar />
+        <SearchBar addItem='New Item' />
       </FlexWrapper>
     </main>
   )

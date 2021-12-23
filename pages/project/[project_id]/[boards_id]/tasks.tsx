@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import nookies from 'nookies'
-import styles from '../../../styles/Tasks.module.css'
+import styles from '../../../../styles/Tasks.module.css'
 
 import { Navbar } from '../../../../components/Navbar/Navbar'
 import { ProjectHeader } from '../../../../components/ProjectHeader/ProjectHeader'
@@ -41,7 +41,7 @@ const Tasks = (
       <Navbar />
       <FlexWrapper className={styles.flexWrapper}>
         <ProjectHeader user={user} />
-        <SearchBar />
+        <SearchBar addItem='New Task' />
         <TasksManager />
       </FlexWrapper>
     </main>

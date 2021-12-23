@@ -2,10 +2,13 @@ import React, { SyntheticEvent } from 'react'
 import { FlexWrapper } from '../FlexWrapper/FlexWrapper'
 import styles from './SearchBar.module.css'
 import { MdSearch, MdFilterList, MdPostAdd } from 'react-icons/md'
-import { Button } from '../Button/Button'
 import { ButtonIcon } from '../ButtonIcon/ButtonIcon'
 
-export const SearchBar = () => {
+interface Props {
+  addItem: string
+}
+
+export const SearchBar = ({ addItem }: Props) => {
   const handleFilterButtonPress = (event: SyntheticEvent) => {
     event.preventDefault()
   }
@@ -32,7 +35,7 @@ export const SearchBar = () => {
         onClick={handleNewTaskButtonPress}
         cssClass={styles.newTask}
       >
-        New Task
+        {addItem}
       </ButtonIcon>
     </FlexWrapper>
   )
