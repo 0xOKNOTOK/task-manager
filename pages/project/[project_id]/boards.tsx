@@ -6,19 +6,26 @@ import type {
 } from 'next'
 import nookies from 'nookies'
 import { firebaseAdmin } from '../../../utils/firebaseAdmin'
+import axios from 'axios'
 
 // Components
 import { Navbar } from '../../../components/Navbar/Navbar'
 import { FlexWrapper } from '../../../components/FlexWrapper/FlexWrapper'
-import { ProjectHeader } from '../../../components/ProjectHeader/ProjectHeader'
+import { SearchBar } from '../../../components/SearchBar/SearchBar'
+
+const fetchBoards = async () => {
+  const boards = await axios.get('/').catch(err => {
+    console.log(err)
+  })
+  return boards
+}
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   try {
     const cookies = nookies.get(ctx)
     const token = await firebaseAdmin.auth().verifyIdToken(cookies.token)
     const { uid, email } = token
-
-    // Fetch data and return as props.
+    fetchBoards()
     return {
       props: { user: [email, uid] }
     }
@@ -41,6 +48,7 @@ const Boards = (
       <Navbar />
       <FlexWrapper className={styles.flexWrapper}>
         <h1>a</h1>
+        <SearchBar />
       </FlexWrapper>
     </main>
   )
