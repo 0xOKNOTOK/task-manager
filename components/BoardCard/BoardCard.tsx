@@ -13,3 +13,5 @@ interface Board {
 const BoardCard = (props: Props) => {
   return <div className={styles.base}></div>
 }
+
+export default BoardCard
