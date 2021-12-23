@@ -16,9 +16,6 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
     const token = await firebaseAdmin.auth().verifyIdToken(cookies.token)
     const { uid, email } = token
 
-    if (ctx?.params?.tasks_id === 'task') {
-      console.log('error 404')
-    }
     // Fetch data and return as props.
     return {
       props: { user: [uid] }
