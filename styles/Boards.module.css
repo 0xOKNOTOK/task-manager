@@ -1,7 +1,68 @@
-.flexWrapper {
+.page {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+
+.boardContainer {
+  width: 80%;
+  margin-top: 2%;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 20px 20px;
+  grid-template-areas:
+    '. . . . . '
+    '. . . . .'
+    '. . . . .';
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1200px) {
+  .boardContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+      '. . . '
+      '. . . '
+      '. . . ';
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1078px) {
+  .boardContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+      '. . . '
+      '. . . '
+      '. . . ';
+  }
+}
+
+@media screen and (max-width: 1078px) and (min-width: 800px) {
+  .boardContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px 5px;
+    grid-template-areas:
+      '. . '
+      '. . '
+      '. . ';
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .boardContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      '.'
+      '.'
+      '.';
+  }
 }

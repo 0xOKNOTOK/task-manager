@@ -6,12 +6,17 @@ interface Props {
 }
 
 interface Board {
-  title?: string
+  title: string
   taskNumber: number | string
 }
 
 const BoardCard = (props: Props) => {
-  return <div className={styles.base}></div>
+  return (
+    <div className={styles.base}>
+      <h4>Front-end Stuff</h4>
+      <p>15</p>
+    </div>
+  )
 }
 
 export default BoardCard

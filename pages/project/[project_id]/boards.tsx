@@ -12,6 +12,7 @@ import axios from 'axios'
 import { Navbar } from '../../../components/Navbar/Navbar'
 import { FlexWrapper } from '../../../components/FlexWrapper/FlexWrapper'
 import { SearchBar } from '../../../components/SearchBar/SearchBar'
+import BoardCard from '../../../components/BoardCard/BoardCard'
 
 const fetchBoards = async () => {
   const boards = await axios.get('/').catch(err => {
@@ -46,10 +47,22 @@ const Boards = (
   return (
     <main>
       <Navbar />
-      <FlexWrapper className={styles.flexWrapper}>
-        <h1>a</h1>
+      <div className={styles.page}>
+        <FlexWrapper className={styles.header}>
+          <h1>Boards</h1>
+        </FlexWrapper>
         <SearchBar addItem='New Item' />
-      </FlexWrapper>
+        <FlexWrapper className={styles.boardContainer}>
+          <BoardCard />
+          <BoardCard />
+          <BoardCard />
+          <BoardCard />
+          <BoardCard />
+          <BoardCard />
+          <BoardCard />
+          <BoardCard />
+        </FlexWrapper>
+      </div>
     </main>
   )
 }
